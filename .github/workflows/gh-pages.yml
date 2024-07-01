@@ -19,15 +19,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
       - name: Setup Ruby
-        uses: ruby/setup-ruby@5f19ec79cedfadb78ab837f95b87734d0003c899 # v1.139.0
+        uses: ruby/setup-ruby@1d0e911f615a112e322369596f10ee0b95b010ae # v1.139.0
         with:
           ruby-version: '3.2'
           bundler-cache: true
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - name: Build with RDoc
         # Outputs to the './_site' directory by default
         run: bundle exec rake rdoc
